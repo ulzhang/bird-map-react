@@ -2,17 +2,20 @@ import React, { useEffect, useState } from "react";
 import { LatLngExpression } from "leaflet";
 import { MapContainer, TileLayer, Marker, Tooltip, Polyline, useMap, Popup, ZoomControl } from "react-leaflet";
 import { connect } from "react-redux";
-import { setPlacePreviewVisibility, setSelectedPlace } from "../../store/actions";
+import { setAllPlaces, setPlacePreviewVisibility, setSelectedPlace } from "../../store/actions";
 import { IState, Place } from "../../store/models";
 import AddMarker from "./AddMarker";
 import { mapboxAPI } from "../../Constants"
 import icon from "../../Constants";
 import L from "leaflet";
+import { data } from "../../data";
+
 
 import "./Map.css";
 
 const Map = ({
   isVisible,
+  setAllPlacesAgain,
   places,
   selectedPlace,
   togglePreview,
@@ -27,6 +30,10 @@ const Map = ({
   //     return prev;
   //   }, []))
   // }, [places]);
+
+  
+  useEffect(() => {data().then((res) => setAllPlacesAgain(res))}, [])
+  console.log(places)
 
   function LocationMarker() {
     const [position, setPosition] = useState(defaultPosition);
@@ -70,15 +77,14 @@ const Map = ({
     togglePreview(true);
   };
 
-    places.map((place: Place) => {
-      console.log(place.position)
-    })
+  console.log("Map initialized")
+  places.map((place: Place) => (console.log(place)));
 
   return (
     <div className="map__container">
       <MapContainer
         center={defaultPosition}
-        zoom={20}
+        zoom={18}
         scrollWheelZoom={true}
         style={{ height: "100vh" }}
         zoomControl={false}
@@ -86,7 +92,7 @@ const Map = ({
         <TileLayer
           url='https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}'
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          maxZoom={20}
+          maxZoom={18}
           id='mapbox/streets-v11'
           tileSize={512}
           zoomOffset={-1}
@@ -119,6 +125,7 @@ const Map = ({
 };
 
 const mapStateToProps = (state: IState) => {
+  console.log("mapstatetoprops")
   const { places } = state;
   return {
     isVisible: places.placePreviewsIsVisible,
@@ -133,6 +140,8 @@ const mapDispatchToProps = (dispatch: any) => {
       dispatch(setPlacePreviewVisibility(payload)),
     setPlaceForPreview: (payload: Place) =>
       dispatch(setSelectedPlace(payload)),
+    setAllPlacesAgain: (payload: Place[]) =>
+      dispatch(setAllPlaces(payload))
   };
 };
 

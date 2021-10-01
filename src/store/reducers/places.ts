@@ -11,7 +11,7 @@ import { data } from "../../data";
 import { LatLngExpression } from "leaflet";
 
 const initialState: PlaceState = {
-  places: data,
+  places: [],
   selectedPlace: null,
   placePreviewsIsVisible: false,
   placeFormIsVisible: false,
