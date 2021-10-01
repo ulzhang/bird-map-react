@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/bird-map-react/static/css/main.61fb6a28.chunk.css",
-    "main.js": "/bird-map-react/static/js/main.397e5a6d.chunk.js",
-    "main.js.map": "/bird-map-react/static/js/main.397e5a6d.chunk.js.map",
+    "main.js": "/bird-map-react/static/js/main.b54bedc1.chunk.js",
+    "main.js.map": "/bird-map-react/static/js/main.b54bedc1.chunk.js.map",
     "runtime-main.js": "/bird-map-react/static/js/runtime-main.664412a5.js",
     "runtime-main.js.map": "/bird-map-react/static/js/runtime-main.664412a5.js.map",
-    "static/js/2.b81a7d9b.chunk.js": "/bird-map-react/static/js/2.b81a7d9b.chunk.js",
-    "static/js/2.b81a7d9b.chunk.js.map": "/bird-map-react/static/js/2.b81a7d9b.chunk.js.map",
+    "static/js/2.4ac10945.chunk.js": "/bird-map-react/static/js/2.4ac10945.chunk.js",
+    "static/js/2.4ac10945.chunk.js.map": "/bird-map-react/static/js/2.4ac10945.chunk.js.map",
     "static/js/3.a451de9e.chunk.js": "/bird-map-react/static/js/3.a451de9e.chunk.js",
     "static/js/3.a451de9e.chunk.js.map": "/bird-map-react/static/js/3.a451de9e.chunk.js.map",
     "index.html": "/bird-map-react/index.html",
     "static/css/main.61fb6a28.chunk.css.map": "/bird-map-react/static/css/main.61fb6a28.chunk.css.map",
-    "static/js/2.b81a7d9b.chunk.js.LICENSE.txt": "/bird-map-react/static/js/2.b81a7d9b.chunk.js.LICENSE.txt"
+    "static/js/2.4ac10945.chunk.js.LICENSE.txt": "/bird-map-react/static/js/2.4ac10945.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.664412a5.js",
-    "static/js/2.b81a7d9b.chunk.js",
+    "static/js/2.4ac10945.chunk.js",
     "static/css/main.61fb6a28.chunk.css",
-    "static/js/main.397e5a6d.chunk.js"
+    "static/js/main.b54bedc1.chunk.js"
   ]
 }
